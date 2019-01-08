@@ -1,0 +1,14 @@
+AddToFunc InitFunction
+# Change keyboard layout to your layout. Use caps to switch to 1 layout, shift+caps to switch to second layout
+	+ I Exec exec setxkbmap -layout "us,lt,ru" -option "grp:ctrl_shift_toggle"
+	+ I Exec exec xrdb -merge ~/.Xresources
+	+ I Exec exec hsetroot -fill ~/.wallpaper.jpg
+	+ I Exec exec xautolock -time 10 -locker 'slock'
+# Tray applications. Test if installed and launch with 3s delay
+	+ I Test (X fbxkb) Exec exec sh -c "sleep 3 && fbxkb"
+	+ I Test (X volumeicon) Exec exec sh -c "sleep 3 && volumeicon"
+AddToFunc ExitFunction
+           + I Test (ToRestart) Beep
+#AddToFunc RestartFunction
+#	+ I Exec exec ...
+

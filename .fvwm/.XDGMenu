@@ -1,0 +1,73 @@
+DestroyMenu "XDGMenu"
+AddToMenu "XDGMenu" "XDGMenu" Title
++ "Garsas ir vaizdas%/usr/share/icons/gnome/16x16/categories/applications-multimedia.png%" Popup "Garsas ir vaizdas"
++ "Grafika%/usr/share/icons/gnome/16x16/categories/applications-graphics.png%" Popup "Grafika"
++ "Internetas%/usr/share/icons/gnome/16x16/categories/applications-internet.png%" Popup "Internetas"
++ "Raštinė%/usr/share/icons/gnome/16x16/categories/applications-office.png%" Popup "Raštinė"
++ "Reikmenys%/usr/share/icons/gnome/16x16/categories/applications-accessories.png%" Popup "Reikmenys"
++ "Sistemos įrankiai%/usr/share/icons/gnome/16x16/categories/applications-system.png%" Popup "Sistemos įrankiai"
++ "Švietimas%/usr/share/icons/gnome/16x16/categories/applications-science.png%" Popup "Švietimas"
+# not supported: <xdg.Menu.Separator instance at 0x7f8acd589248>
++ "Nustatymai%/usr/share/icons/gnome/16x16/categories/preferences-desktop.png%" Popup "Nustatymai"
++ "" Nop
++ "$[gt.Configure]%/usr/share/icons/gnome/16x16/apps/system-software-update.png%" Module FvwmPerl -l fvwm-menu-desktop-config.fpl
+
+DestroyMenu "Garsas ir vaizdas"
+AddToMenu "Garsas ir vaizdas" "Garsas ir vaizdas" Title
++ "Alsamixergui%/home/mindaugas/.fvwm/icons/16x16-alsamixergui.png%" Exec exec  /usr/bin/alsamixergui
++ "Asunder CD Ripper%/home/mindaugas/.fvwm/icons/16x16-asunder.png%" Exec exec  asunder 
++ "Audacious%/home/mindaugas/.fvwm/icons/16x16-audacious.png%" Exec exec  audacious 
++ "Audacious Qt Interface%/home/mindaugas/.fvwm/icons/16x16-audacious.png%" Exec exec  audacious --qt 
++ "Ncmpcpp%/usr/share/icons/gnome/16x16/categories/gnome-applications.png%" Exec exec  ncmpcpp
++ "SMPlayer%/home/mindaugas/.fvwm/icons/16x16-smplayer.png%" Exec exec  smplayer 
++ "mpv Media Player%/usr/share/icons/hicolor/16x16/apps/mpv.png%" Exec exec  mpv --player-operation-mode=pseudo-gui -- 
+
+DestroyMenu "Grafika"
+AddToMenu "Grafika" "Grafika" Title
++ "ImageMagick (color depth=q16)%/home/mindaugas/.fvwm/icons/16x16-display-im6.q16.png%" Exec exec  /usr/bin/display-im6.q16 -nostdin 
++ "LibreOffice Draw%/usr/share/icons/gnome/16x16/apps/libreoffice-draw.png%" Exec exec  libreoffice --draw 
++ "Viewnior%/home/mindaugas/.fvwm/icons/16x16-viewnior.png%" Exec exec  viewnior 
+
+DestroyMenu "Internetas"
+AddToMenu "Internetas" "Internetas" Title
++ "Chromium Web Browser%/home/mindaugas/.fvwm/icons/16x16-chromium.png%" Exec exec  /usr/bin/chromium 
++ "Firefox ESR%/usr/share/icons/hicolor/16x16/apps/firefox-esr.png%" Exec exec  /usr/lib/firefox-esr/firefox-esr 
++ "qBittorrent%/home/mindaugas/.fvwm/icons/16x16-qbittorrent.png%" Exec exec  qbittorrent 
+
+DestroyMenu "Raštinė"
+AddToMenu "Raštinė" "Raštinė" Title
++ "LibreOffice%/usr/share/icons/gnome/16x16/apps/libreoffice-startcenter.png%" Exec exec  libreoffice 
++ "LibreOffice Base%/usr/share/icons/gnome/16x16/apps/libreoffice-base.png%" Exec exec  libreoffice --base 
++ "LibreOffice Calc%/usr/share/icons/gnome/16x16/apps/libreoffice-calc.png%" Exec exec  libreoffice --calc 
++ "LibreOffice Draw%/usr/share/icons/gnome/16x16/apps/libreoffice-draw.png%" Exec exec  libreoffice --draw 
++ "LibreOffice Impress%/usr/share/icons/gnome/16x16/apps/libreoffice-impress.png%" Exec exec  libreoffice --impress 
++ "LibreOffice Math%/usr/share/icons/gnome/16x16/apps/libreoffice-math.png%" Exec exec  libreoffice --math 
++ "LibreOffice Writer%/usr/share/icons/gnome/16x16/apps/libreoffice-writer.png%" Exec exec  libreoffice --writer 
++ "Zathura%/usr/share/icons/gnome/16x16/categories/gnome-applications.png%" Exec exec  zathura 
+
+DestroyMenu "Reikmenys"
+AddToMenu "Reikmenys" "Reikmenys" Title
++ "Midnight Commander editor%/home/mindaugas/.fvwm/icons/16x16-MidnightCommander.png%" Exec exec  mcedit
++ "Rxvt Color Unicode Terminal%/home/mindaugas/.fvwm/icons/16x16-urxvt_48x48.png%" Exec exec  urxvt
++ "Vim%/home/mindaugas/.fvwm/icons/16x16-gvim.png%" Exec exec  vim 
+
+DestroyMenu "Sistemos įrankiai"
+AddToMenu "Sistemos įrankiai" "Sistemos įrankiai" Title
++ "Failų tvarkyklė PCManFM%/usr/share/icons/gnome/16x16/apps/system-file-manager.png%" Exec exec  pcmanfm 
++ "Midnight Commander%/home/mindaugas/.fvwm/icons/16x16-MidnightCommander.png%" Exec exec  mc
++ "Reportbug%/usr/share/icons/gnome/16x16/places/debian-swirl.png%" Exec exec  reportbug --exit-prompt --ui gtk2
++ "UXTerm%/home/mindaugas/.fvwm/icons/16x16-xterm-color.png%" Exec exec  uxterm
++ "Užduočių tvarkyklė%/usr/share/icons/gnome/16x16/apps/utilities-system-monitor.png%" Exec exec  lxtask
++ "XTerm%/home/mindaugas/.fvwm/icons/16x16-xterm-color.png%" Exec exec  xterm
+
+DestroyMenu "Švietimas"
+AddToMenu "Švietimas" "Švietimas" Title
++ "LibreOffice Math%/usr/share/icons/gnome/16x16/apps/libreoffice-math.png%" Exec exec  libreoffice --math 
+
+DestroyMenu "Nustatymai"
+AddToMenu "Nustatymai" "Nustatymai" Title
++ "Darbastalio nustatymai%/usr/share/icons/gnome/16x16/places/user-desktop.png%" Exec exec  pcmanfm --desktop-pref
++ "Derinti išvaizdą%/usr/share/icons/gnome/16x16/apps/preferences-desktop-theme.png%" Exec exec  lxappearance
++ "IcedTea Web Control Panel%/home/mindaugas/.fvwm/icons/16x16-javaws.png%" Exec exec  /usr/bin/itweb-settings
++ "OpenJDK Java 8 Policy Tool%/home/mindaugas/.fvwm/icons/16x16-openjdk-8.png%" Exec exec  /usr/bin/policytool
+
