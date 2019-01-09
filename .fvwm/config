@@ -1,4 +1,4 @@
-# FVWM2 config by ILUXA (Intended to use with Vertex GTK theme by horst3180)
+# FVWM2 config
 
 # Set X session environment variables
 #SetEnv PATH '/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$[HOME]/.local/bin'
@@ -303,13 +303,13 @@ Key Down	M	M		MenuMoveCursor +1				#using alt+tab
 Key Tab		A	M		WindowList Root c c NoCurrentDeskTitle, IconifiedAtEnd, MaxLabelWidth 100
 # Application keybindings
 Key X		A	CM		Exec exec xkill					#Ctrl+Alt+x
-Key L		A	CM		Exec exec xscreensaver-command -lock		#Ctrl+Alt+l
-Key T		A	C4		Exec exec transset -t 0.85			#Ctrl+Super+t
+Key L		A	CM		Exec exec slock                     		#Ctrl+Alt+l
+Key T		A	C4		Exec exec urxvt	          			#Ctrl+Super+t
 Key X		A	C4		Exec exec xcalc					#Ctrl+Super+x
-Key C		A	C4		Exec exec gcolor2				#Ctrl+Super+c
-Key Escape	A	C		Exec exec $[terminal] -e htop			#Ctrl+Escape
-Key Print	A	S		Exec exec gnome-screenshot -d 3 -p		#Shift+Print
-Key Print	A	4		Exec exec gnome-screenshot -w -b -p -e shadow	#Super+Print
+Key C		A	C4		Exec exec firefox				#Ctrl+Super+c
+Key Escape	A	C		Exec exec $[terminal] -e top			#Ctrl+Escape
+Key Print	A	S		Exec exec pcmanfm               		#Shift+Print
+Key Print	A	4		Exec exec scrot	                                #Super+Print
 Key Print	A	C		Exec exec gnome-screenshot -a			#Ctrl+Print
 # Volume control (media keys) FreeBSD
 Key XF86AudioRaiseVolume A A		Exec exec mixer vol +7
@@ -382,7 +382,8 @@ Test (X wmamixer) *Dock: (3x3, Frame 2, Swallow(Kill) 'wmamixer'\
 *Dock: (1x1, Frame 1, Icon term16.png,\
 	Action(Mouse1) 'Exec exec $[terminal]')
 *Dock: (1x1, Frame 1, Icon folder16.png,\
-	Action(Mouse1) 'Exec exec pcmanfm')
+	Action(Mouse1) 'Exec exec pcmanfm',\
+        Action(Mouse3) 'Exec exec $[terminal] -e mc')
 *Dock: (1x1, Frame 1, Icon vim16.png,\
 	Action(Mouse1) 'Exec exec $[edit]')
 *Dock: (1x1, Frame 1, Icon chrome16.png,\
@@ -392,7 +393,7 @@ Test (X wmamixer) *Dock: (3x3, Frame 2, Swallow(Kill) 'wmamixer'\
 *Dock: (1x1, Frame 1, Icon audacious16.png,\
 	Action(Mouse1) 'Exec exec audacious')
 *Dock: (1x1, Frame 1, Icon system-monitor16.png,\
-	Action(Mouse1) 'Exec exec $[terminal] -e atop',\
+	Action(Mouse1) 'Exec exec lxtask',\
 	Action(Mouse3) 'Exec exec $[terminal] -e top')
 *Dock: (3x3, Frame 3, Swallow(UseOld,NoClose) 'FvwmPager'\
 	'Module FvwmPager DockPager 0 3',\
