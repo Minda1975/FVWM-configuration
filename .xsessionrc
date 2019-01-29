@@ -2,7 +2,7 @@
 
 # Load resources
 
-xrdb -merge .Xresources
+ xsettingsd &
 
 export GTK_OVERLAY_SCROLLING=0
 # Fire up apps
